@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#0A0C10"/>
+  <g transform="translate(250, 175)">
+    <!-- Main Transmission Housing -->
+    <path d="M -120 -90 L 110 -70 L 140 60 L 60 110 L -110 90 L -140 -20 Z" fill="#334155" stroke="#94A3B8" stroke-width="4"/>
+    
+    <!-- Cutaway Gears Inside -->
+    <circle cx="-30" cy="-10" r="50" fill="#1E293B" stroke="#00D2FF" stroke-width="3" stroke-dasharray="10 6"/>
+    <circle cx="45" cy="25" r="35" fill="#1E293B" stroke="#E50914" stroke-width="3" stroke-dasharray="8 5"/>
+    <circle cx="-30" cy="-10" r="18" fill="#475569"/>
+    <circle cx="45" cy="25" r="14" fill="#475569"/>
+
+    <!-- Drive Shaft Flange -->
+    <rect x="-170" y="-30" width="30" height="60" rx="6" fill="#64748B" stroke="#00D2FF" stroke-width="2"/>
+    <rect x="140" y="10" width="35" height="40" rx="4" fill="#64748B" stroke="#00D2FF" stroke-width="2"/>
+  </g>
+  <!-- Label -->
+  <text x="250" y="310" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="20" fill="#00D2FF">CAIXA DE ACELERAÇÃO / TRANSMISSÃO</text>
+</svg>

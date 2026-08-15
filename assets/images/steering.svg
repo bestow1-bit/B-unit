@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#0A0C10"/>
+  <g transform="translate(250, 175)">
+    <!-- Steering Rack Center Cylinder -->
+    <rect x="-180" y="-18" width="360" height="36" rx="8" fill="#475569" stroke="#94A3B8" stroke-width="3"/>
+    <rect x="-140" y="-24" width="60" height="48" rx="6" fill="#334155" stroke="#00D2FF" stroke-width="2"/>
+    
+    <!-- Pinion Shaft Top -->
+    <rect x="-120" y="-90" width="24" height="70" rx="4" fill="#64748B" stroke="#00D2FF" stroke-width="2"/>
+    <path d="M -125 -90 L -115 -105 L -105 -90 Z" fill="#00D2FF"/>
+
+    <!-- Rubber Boots Left & Right -->
+    <g fill="#1E293B" stroke="#64748B" stroke-width="2">
+      <path d="M -180 -25 L -230 -15 V 15 L -180 25 Z"/>
+      <path d="M 180 -25 L 230 -15 V 15 L 180 25 Z"/>
+    </g>
+
+    <!-- Tie Rod Ends Left & Right -->
+    <line x1="-230" y1="0" x2="-290" y2="0" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="-290" cy="0" r="14" fill="#E50914" stroke="#FFFFFF" stroke-width="2"/>
+
+    <line x1="230" y1="0" x2="290" y2="0" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="290" cy="0" r="14" fill="#E50914" stroke="#FFFFFF" stroke-width="2"/>
+  </g>
+  <!-- Label -->
+  <text x="250" y="310" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="20" fill="#00D2FF">CAIXA DE DIREÇÃO</text>
+</svg>
