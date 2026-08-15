@@ -1,8 +1,8 @@
 import { Product, ShiftInfo, SafetyCardItem } from '../types';
 
-export const OFFICIAL_LOGO_URL = 'C:\Users\kioskUser0\.gemini\antigravity\scratch\b-unit-website\assets';
+export const OFFICIAL_LOGO_URL = '\assets';
 
-export const OWNER_PHOTO_URL = 'C:\Users\kioskUser0\.gemini\antigravity\scratch\b-unit-website\assets';
+export const OWNER_PHOTO_URL = '\assets';
 
 // Exact Tagline Provided: TVP — Transporte e Vendas de Peças
 export const BRAND_TAGLINE = 'TVP — Transporte e Vendas de Peças';
