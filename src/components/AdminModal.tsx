@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Lock, Plus, ShieldCheck, Trash2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Product } from '../types';
-import { AUTO_PARTS_CATEGORIES } from '../data/constants';
+import { AUTO_PARTS_CATEGORIES, INITIAL_USER_PRODUCTS } from '../data/constants';
 import { sanitizeProductInput } from '../utils/security';
 
 interface AdminModalProps {
@@ -48,12 +48,13 @@ export const AdminModal: React.FC<AdminModalProps> = ({
 
     if (!name.trim()) return;
 
+    const fallbackImage = INITIAL_USER_PRODUCTS[0]?.image || '';
     const sanitized = sanitizeProductInput({
       name,
       category,
       description,
       availability,
-      image: image || '/images/placeholder-part.jpg',
+      image: image || fallbackImage,
     });
 
     const newProd: Product = {
@@ -62,7 +63,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
       category: sanitized.category,
       description: sanitized.description,
       availability: sanitized.availability as any,
-      image: sanitized.image,
+      image: sanitized.image || fallbackImage,
       isRealUploaded: true,
     };
 
@@ -128,13 +129,13 @@ export const AdminModal: React.FC<AdminModalProps> = ({
                 className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white focus:border-red-500 focus:outline-none text-sm"
               />
               <p className="text-[10px] text-zinc-500 mt-1">
-                (Dica de demonstração: <code className="text-zinc-400">bunit2026</code>)
+                (Acesso restrito ao proprietário da B-Unit)
               </p>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2"
+              className="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
             >
               <ShieldCheck className="w-4 h-4" />
               <span>Entrar no Painel</span>
@@ -163,7 +164,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
                   <input
                     type="text"
                     required
-                    placeholder="Ex: Filtro de Óleo Bosch"
+                    placeholder="Ex: Filtro de Óleo"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="w-full px-3 py-2 rounded-lg bg-zinc-950 border border-zinc-800 text-white text-xs"
@@ -190,7 +191,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
                 <label className="block text-xs font-semibold text-zinc-400 mb-1">URL / Caminho da Imagem</label>
                 <input
                   type="text"
-                  placeholder="Ex: file:///... ou https://..."
+                  placeholder="Ex: https://... ou assets/images/..."
                   value={image}
                   onChange={(e) => setImage(e.target.value)}
                   className="w-full px-3 py-2 rounded-lg bg-zinc-950 border border-zinc-800 text-white text-xs font-mono"
@@ -214,7 +215,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
                 </span>
                 <button
                   type="submit"
-                  className="px-5 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider"
+                  className="px-5 py-2 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider cursor-pointer"
                 >
                   Guardar Peça
                 </button>
@@ -238,7 +239,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
                         alt={prod.name}
                         className="w-10 h-10 object-cover rounded-lg bg-black border border-zinc-800"
                         onError={(e) => {
-                          (e.target as HTMLElement).setAttribute('src', 'https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=100');
+                          (e.target as HTMLElement).style.display = 'none';
                         }}
                       />
                       <div>
@@ -249,7 +250,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
 
                     <button
                       onClick={() => onDeleteProduct(prod.id)}
-                      className="p-2 text-zinc-500 hover:text-rose-400 hover:bg-rose-950/40 rounded-lg transition-colors"
+                      className="p-2 text-zinc-500 hover:text-rose-400 hover:bg-rose-950/40 rounded-lg transition-colors cursor-pointer"
                       title="Eliminar produto"
                     >
                       <Trash2 className="w-4 h-4" />

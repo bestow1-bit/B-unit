@@ -64,7 +64,7 @@ export const AutoPartsPage: React.FC<AutoPartsPageProps> = ({
             {/* Admin trigger button for owner */}
             <button
               onClick={onOpenAdmin}
-              className="self-start md:self-auto px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold flex items-center gap-2 transition-colors"
+              className="self-start md:self-auto px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold flex items-center gap-2 transition-colors cursor-pointer"
               title="Área restrita de gestão de peças"
             >
               <Settings className="w-4 h-4 text-red-400" />
@@ -114,7 +114,7 @@ export const AutoPartsPage: React.FC<AutoPartsPageProps> = ({
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg border shrink-0 transition-all font-semibold ${
+                className={`px-3 py-1.5 rounded-lg border shrink-0 transition-all font-semibold cursor-pointer ${
                   selectedCategory === cat
                     ? 'bg-red-600 border-red-500 text-white shadow-md'
                     : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-700 hover:text-white'
@@ -131,7 +131,7 @@ export const AutoPartsPage: React.FC<AutoPartsPageProps> = ({
            =================================================== */}
         {filteredProducts.length === 0 ? (
           
-          /* Exact Empty State Required in Section 18 */
+          /* Exact Empty State Required */
           <div className="bg-slate-900/90 rounded-3xl p-12 text-center border border-slate-800 space-y-6 max-w-3xl mx-auto shadow-2xl">
             <div className="w-16 h-16 rounded-full bg-red-950/70 border border-red-800/60 flex items-center justify-center mx-auto text-red-500">
               <AlertCircle className="w-8 h-8" />
@@ -147,7 +147,7 @@ export const AutoPartsPage: React.FC<AutoPartsPageProps> = ({
 
             <button
               onClick={onOpenGeneralContact}
-              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm uppercase tracking-wider inline-flex items-center gap-3 shadow-xl shadow-red-950/60 transition-all hover:scale-105"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-sm uppercase tracking-wider inline-flex items-center gap-3 shadow-xl shadow-red-950/60 transition-all hover:scale-105 cursor-pointer"
             >
               <PhoneCall className="w-4 h-4" />
               <span>ENTRAR EM CONTACTO</span>
@@ -176,17 +176,12 @@ export const AutoPartsPage: React.FC<AutoPartsPageProps> = ({
                 >
                   
                   {/* Image Container */}
-                  <div className="relative h-52 bg-slate-950 overflow-hidden border-b border-slate-800">
+                  <div className="relative h-52 bg-slate-950 overflow-hidden border-b border-slate-800 flex items-center justify-center p-3">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => {
-                        (e.target as HTMLElement).setAttribute(
-                          'src',
-                          'https://images.unsplash.com/photo-1486006920555-c77dce18193b?w=500'
-                        );
-                      }}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
 
                     {/* Category Badge */}
@@ -219,7 +214,7 @@ export const AutoPartsPage: React.FC<AutoPartsPageProps> = ({
 
                       <button
                         onClick={() => onOpenProductContact(product)}
-                        className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-red-950/40 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                        className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-red-950/40 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                       >
                         <MessageSquare className="w-4 h-4" />
                         <span>ENTRAR EM CONTACTO</span>
@@ -244,7 +239,7 @@ export const AutoPartsPage: React.FC<AutoPartsPageProps> = ({
           </div>
           <button
             onClick={onOpenGeneralContact}
-            className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider border border-slate-700 shrink-0"
+            className="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider border border-slate-700 shrink-0 cursor-pointer"
           >
             Falar com a Equipa
           </button>

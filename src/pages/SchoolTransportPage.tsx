@@ -5,6 +5,11 @@ import {
   TRANSPORT_SHIFTS,
   SAFETY_CARDS,
   BRAND_TAGLINE,
+  VAN_EXT_IMAGE,
+  VAN_INT_IMAGE,
+  OFFICIAL_PHONE_DISPLAY,
+  OFFICIAL_WHATSAPP_URL,
+  OFFICIAL_PHONE_RAW
 } from '../data/constants';
 import { sanitizeString, validatePhoneNumber, checkRateLimit } from '../utils/security';
 import {
@@ -57,6 +62,7 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
 
     const cleanName = sanitizeString(form.name);
     const cleanPhone = sanitizeString(form.phone);
+    const cleanMessage = sanitizeString(form.message);
 
     if (!cleanName || cleanName.length < 2) {
       setFormStatus('error');
@@ -71,8 +77,18 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
     }
 
     setFormStatus('submitting');
+    
+    // Formatar mensagem para envio WhatsApp seguro
+    const whatsappMsg = `*Solicitação de Informações - Transporte Escolar B-Unit*%0A%0A` +
+                        `*Encarregado:* ${encodeURIComponent(cleanName)}%0A` +
+                        `*Contacto:* ${encodeURIComponent(cleanPhone)}%0A` +
+                        `*Escola:* ${encodeURIComponent(SCHOOL_NAME)}%0A` +
+                        `*Turno:* ${encodeURIComponent(form.shift)}%0A` +
+                        `*Mensagem:* ${encodeURIComponent(cleanMessage || 'Gostaria de solicitar informações sobre o transporte escolar.')}`;
+
     setTimeout(() => {
       setFormStatus('success');
+      window.open(`https://wa.me/${OFFICIAL_PHONE_RAW}?text=${whatsappMsg}`, '_blank', 'noopener,noreferrer');
     }, 700);
   };
 
@@ -130,6 +146,15 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
                   <MapPin className="w-4 h-4 text-sky-400" />
                   <span>Zonas: {SCHOOL_ZONES.join(' • ')}</span>
                 </div>
+
+                <a 
+                  href={OFFICIAL_WHATSAPP_URL} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-3.5 py-2 rounded-xl bg-emerald-950/80 backdrop-blur-md border border-emerald-700/60 text-emerald-300 flex items-center gap-2 hover:bg-emerald-900 transition-colors"
+                >
+                  <span>WhatsApp: {OFFICIAL_PHONE_DISPLAY}</span>
+                </a>
               </div>
 
               <div className="pt-4">
@@ -145,14 +170,16 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
 
             <div className="lg:col-span-5">
               <div className="bg-slate-950/80 rounded-3xl p-6 border border-slate-800 shadow-2xl text-center space-y-4">
-                <div className="w-full h-56 rounded-2xl border-2 border-dashed border-slate-700 bg-slate-900 flex flex-col items-center justify-center text-slate-400 p-4">
-                  <Camera className="w-12 h-12 text-slate-600 mb-2" />
-                  <span className="text-xs font-bold text-slate-300">
-                    Fotografia Real da Carrinha B-Unit
-                  </span>
-                  <span className="text-[10px] text-slate-500 mt-1">
-                    (Espaço preparado para imagens da viatura)
-                  </span>
+                <div className="w-full h-56 rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 relative group">
+                  <img 
+                    src={VAN_EXT_IMAGE} 
+                    alt="Carrinha de Transporte Escolar B-Unit" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                    <span className="text-xs font-bold text-white">Carrinha B-Unit em Operação</span>
+                  </div>
                 </div>
 
                 <div className="text-xs text-slate-300 font-semibold bg-slate-900/90 p-3 rounded-xl border border-slate-800">
@@ -292,7 +319,7 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
       </section>
 
       {/* ===================================================
-          GALERIA (PREPARED SPACE FOR REAL IMAGES)
+          GALERIA DA VIATURA COM AS IMAGENS REAIS DO PROJETO
          =================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xl space-y-6">
@@ -300,22 +327,36 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
           <div className="flex items-center justify-between border-b border-slate-100 pb-4">
             <div>
               <h3 className="font-serif text-2xl font-bold text-slate-900">Galeria da Viatura</h3>
-              <p className="text-xs text-slate-500">Espaço preparado para fotografias reais da carrinha</p>
+              <p className="text-xs text-slate-500">Fotografias reais da carrinha e do interior dos assentos</p>
             </div>
             <Camera className="w-6 h-6 text-sky-600" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="h-48 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 flex flex-col items-center justify-center text-slate-400 p-4 text-center">
-              <Camera className="w-10 h-10 mb-2 text-slate-400" />
-              <span className="text-xs font-bold text-slate-600">Fotografia Exterior da Carrinha</span>
-              <span className="text-[10px] text-slate-400 mt-1">(Aguardando envio do proprietário)</span>
+            <div className="h-64 rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 relative group shadow-md">
+              <img 
+                src={VAN_EXT_IMAGE} 
+                alt="Fotografia Exterior da Carrinha B-Unit" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4 text-white">
+                <span className="text-sm font-bold">Viatura Escolar B-Unit</span>
+                <span className="text-xs text-slate-300">Exterior da carrinha pronta para os percursos</span>
+              </div>
             </div>
 
-            <div className="h-48 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 flex flex-col items-center justify-center text-slate-400 p-4 text-center">
-              <Camera className="w-10 h-10 mb-2 text-slate-400" />
-              <span className="text-xs font-bold text-slate-600">Fotografia Interior dos Assentos</span>
-              <span className="text-[10px] text-slate-400 mt-1">(Aguardando envio do proprietário)</span>
+            <div className="h-64 rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 relative group shadow-md">
+              <img 
+                src={VAN_INT_IMAGE} 
+                alt="Fotografia Interior dos Assentos da Carrinha B-Unit" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4 text-white">
+                <span className="text-sm font-bold">Assentos e Interior Organizado</span>
+                <span className="text-xs text-slate-300">Cintos de segurança individuais e ambiente higienizado</span>
+              </div>
             </div>
           </div>
 
@@ -341,9 +382,9 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
           {formStatus === 'success' ? (
             <div className="text-center py-8 space-y-4">
               <CheckCircle2 className="w-16 h-16 text-emerald-400 mx-auto animate-bounce" />
-              <h4 className="text-xl font-bold">Solicitação Recebida com Sucesso!</h4>
+              <h4 className="text-xl font-bold">Solicitação Encaminhada!</h4>
               <p className="text-sm text-slate-300">
-                Obrigado pelo contacto. A equipa B-Unit responderá com a máxima brevidade.
+                A sua solicitação foi encaminhada para o WhatsApp oficial da B-Unit (<strong className="text-emerald-400 font-mono">{OFFICIAL_PHONE_DISPLAY}</strong>). Responderemos o mais brevemente possível!
               </p>
             </div>
           ) : (
@@ -355,23 +396,27 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
                 value={form.honeypot}
                 onChange={(e) => setForm({ ...form, honeypot: e.target.value })}
                 className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
               />
 
               {formStatus === 'error' && (
                 <div className="p-3 rounded-xl bg-rose-950/80 border border-rose-800 text-rose-200 text-xs flex items-center gap-2">
-                  <AlertCircle className="w-4 h-4 text-rose-400" />
+                  <AlertCircle className="w-4 h-4 text-rose-400 shrink-0" />
                   <span>{formError}</span>
                 </div>
               )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                  <label htmlFor="trans-name-input" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
                     Seu Nome *
                   </label>
                   <input
+                    id="trans-name-input"
                     type="text"
                     required
+                    maxLength={100}
                     placeholder="Ex: Maria Fernandes"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -380,13 +425,15 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                  <label htmlFor="trans-phone-input" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
                     Telefone de Contacto *
                   </label>
                   <input
+                    id="trans-phone-input"
                     type="tel"
                     required
-                    placeholder="Ex: +258 84 000 0000"
+                    maxLength={20}
+                    placeholder="Ex: +258 86 621 1120"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:border-amber-500 focus:outline-none text-sm font-mono"
@@ -396,10 +443,11 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                  <label htmlFor="trans-school-input" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
                     Escola *
                   </label>
                   <input
+                    id="trans-school-input"
                     type="text"
                     disabled
                     value={SCHOOL_NAME}
@@ -408,10 +456,11 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                  <label htmlFor="trans-shift-select" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
                     Turno *
                   </label>
                   <select
+                    id="trans-shift-select"
                     value={form.shift}
                     onChange={(e) => setForm({ ...form, shift: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:border-amber-500 focus:outline-none text-sm"
@@ -423,11 +472,13 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                <label htmlFor="trans-message-input" className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
                   Mensagem / Questões
                 </label>
                 <textarea
+                  id="trans-message-input"
                   rows={3}
+                  maxLength={500}
                   placeholder="Introduza a sua mensagem ou zona específica de residência..."
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -438,10 +489,10 @@ export const SchoolTransportPage: React.FC<SchoolTransportPageProps> = ({
               <button
                 type="submit"
                 disabled={formStatus === 'submitting'}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl shadow-amber-500/20 transition-all"
+                className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl shadow-amber-500/20 transition-all disabled:opacity-50 cursor-pointer"
               >
                 <Send className="w-4 h-4" />
-                <span>{formStatus === 'submitting' ? 'A enviar...' : 'SOLICITAR INFORMAÇÕES'}</span>
+                <span>{formStatus === 'submitting' ? 'A encaminhar...' : 'SOLICITAR INFORMAÇÕES'}</span>
               </button>
             </form>
           )}

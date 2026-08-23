@@ -1,17 +1,30 @@
 import { Product, ShiftInfo, SafetyCardItem } from '../types';
 
-export const OFFICIAL_LOGO_URL = 'file:///C:/Users/kioskUser0/.gemini/antigravity/brain/f17e1770-7555-47e6-aa26-82af2d93a5c8/.user_uploaded/media__1786566849447.png';
+// Static imports from project assets directory
+import logoImg from '../../assets/images/LOGOTIPO.png';
+import founderImg from '../../assets/images/founder.jpg';
+import gearboxImg from '../../assets/images/caixadeac.jpg';
+import steeringImg from '../../assets/images/CAIXA DE DIREÇÃO.jpg';
+import alternatorImg from '../../assets/images/ALTERNADOR.jpeg';
+import starterImg from '../../assets/images/motor-de-arranque.jpg';
+import vanExtImg from '../../assets/images/van_ext.jpg';
+import vanIntImg from '../../assets/images/van_int.jpg';
+import heroImg from '../../assets/images/hero.jpg';
 
-export const OWNER_PHOTO_URL = 'file:///C:/Users/kioskUser0/.gemini/antigravity/brain/f17e1770-7555-47e6-aa26-82af2d93a5c8/.user_uploaded/media__1786567722216.jpg';
+export const OFFICIAL_LOGO_URL = logoImg;
+export const OWNER_PHOTO_URL = founderImg;
+export const HERO_BG_IMAGE = heroImg;
+export const VAN_EXT_IMAGE = vanExtImg;
+export const VAN_INT_IMAGE = vanIntImg;
 
-// Exact Tagline Provided: TVP — Transporte e Vendas de Peças
+// Exact Tagline: TVP — Transporte e Vendas de Peças
 export const BRAND_TAGLINE = 'TVP — Transporte e Vendas de Peças';
 
 export const OFFICIAL_PHONE_RAW = '258866211120';
 export const OFFICIAL_PHONE_DISPLAY = '+258 86 621 1120';
 export const OFFICIAL_WHATSAPP_URL = `https://wa.me/${OFFICIAL_PHONE_RAW}`;
 
-// 22 Categories exactly as specified in section 17
+// 22 Categories exactly as specified
 export const AUTO_PARTS_CATEGORIES = [
   'Todas as Categorias',
   'Motor',
@@ -38,13 +51,13 @@ export const AUTO_PARTS_CATEGORIES = [
   'Outros'
 ] as const;
 
-// Initial products provided by user uploaded images (No fake items, no prices)
+// Initial products provided by user with local assets (No fake items, no prices)
 export const INITIAL_USER_PRODUCTS: Product[] = [
   {
     id: 'prod-001',
     name: 'Caixa de Velocidades / Transmissão Automóvel',
     category: 'Caixa de velocidades',
-    image: 'file:///C:/Users/kioskUser0/.gemini/antigravity/brain/f17e1770-7555-47e6-aa26-82af2d93a5c8/.user_uploaded/media__1786566907412.jpg',
+    image: gearboxImg,
     description: 'Conjunto completo de transmissão automóvel em excelente estado de conservação mecânica.',
     availability: 'Sob Consulta',
     isRealUploaded: true
@@ -53,7 +66,7 @@ export const INITIAL_USER_PRODUCTS: Product[] = [
     id: 'prod-002',
     name: 'Caixa de Direção Hidráulica / Mecânica',
     category: 'Direção',
-    image: 'file:///C:/Users/kioskUser0/.gemini/antigravity/brain/f17e1770-7555-47e6-aa26-82af2d93a5c8/.user_uploaded/media__1786566941704.jpg',
+    image: steeringImg,
     description: 'Caixa de direção para substituição automóvel com elevado padrão de precisão e durabilidade.',
     availability: 'Em Estoque',
     isRealUploaded: true
@@ -62,7 +75,7 @@ export const INITIAL_USER_PRODUCTS: Product[] = [
     id: 'prod-003',
     name: 'Alternador de Corrente Automóvel',
     category: 'Sistema elétrico',
-    image: 'file:///C:/Users/kioskUser0/.gemini/antigravity/brain/f17e1770-7555-47e6-aa26-82af2d93a5c8/.user_uploaded/media__1786566974412.jpg',
+    image: alternatorImg,
     description: 'Alternador elétrico de alta eficiência para sistema de carga de bateria e iluminação.',
     availability: 'Em Estoque',
     isRealUploaded: true
@@ -71,7 +84,7 @@ export const INITIAL_USER_PRODUCTS: Product[] = [
     id: 'prod-004',
     name: 'Motor de Arranque Automóvel',
     category: 'Sistema elétrico',
-    image: 'file:///C:/Users/kioskUser0/.gemini/antigravity/brain/f17e1770-7555-47e6-aa26-82af2d93a5c8/.user_uploaded/media__1786566984125.jpg',
+    image: starterImg,
     description: 'Motor de arranque de elevada fiabilidade e arranque rápido para motores a gasolina e diesel.',
     availability: 'Em Estoque',
     isRealUploaded: true
