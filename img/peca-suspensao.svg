@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="spring" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <!-- Haste Amortecedor -->
+  <rect x="290" y="50" width="20" height="260" rx="6" fill="#8b949e"/>
+  <!-- Cilindro -->
+  <rect x="275" y="180" width="50" height="130" rx="8" fill="#30363d" stroke="#f59e0b" stroke-width="2"/>
+  <!-- Mola helicoidal estilizada -->
+  <path d="M 260 80 Q 300 60 340 80 Q 300 100 260 110 Q 300 90 340 110 Q 300 130 260 140 Q 300 120 340 140 Q 300 160 260 170 Q 300 150 340 170 Q 300 190 260 200 Q 300 180 340 200 Q 300 220 260 230 Q 300 210 340 230" fill="none" stroke="url(#spring)" stroke-width="14" stroke-linecap="round"/>
+  <!-- Olhal inferior e superior -->
+  <circle cx="300" cy="50" r="16" fill="#21262d" stroke="#8b949e" stroke-width="6"/>
+  <circle cx="300" cy="315" r="16" fill="#21262d" stroke="#8b949e" stroke-width="6"/>
+  <text x="300" y="360" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" fill="#c9d1d9" text-anchor="middle" letter-spacing="1">AMORTECEDOR HEAVY DUTY</text>
+  <text x="300" y="382" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">SUSPENSÃO REFORÇADA • BLACK UNIT</text>
+</svg>

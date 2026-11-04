@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <!-- Corpo da Bateria -->
+  <rect x="170" y="110" width="260" height="170" rx="10" fill="#21262d" stroke="#30363d" stroke-width="4"/>
+  <!-- Polo Positivo e Negativo -->
+  <rect x="200" y="80" width="30" height="30" rx="4" fill="#dc2626"/>
+  <rect x="370" y="80" width="30" height="30" rx="4" fill="#2563eb"/>
+  <text x="215" y="102" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" fill="#fff" text-anchor="middle">+</text>
+  <text x="385" y="100" font-family="'Plus Jakarta Sans', sans-serif" font-size="26" font-weight="800" fill="#fff" text-anchor="middle">-</text>
+  <!-- Alça de transporte -->
+  <path d="M 230 80 Q 300 40 370 80" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+  <!-- Etiqueta central -->
+  <rect x="195" y="140" width="210" height="110" rx="6" fill="#161b22" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="26" font-weight="800" fill="#f59e0b" text-anchor="middle">12V 75Ah</text>
+  <text x="300" y="210" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="600" fill="#e6edf3" text-anchor="middle">680 CCA • HEAVY DUTY</text>
+  <text x="300" y="232" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">LIVRE DE MANUTENÇÃO</text>
+  <text x="300" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" fill="#c9d1d9" text-anchor="middle" letter-spacing="1">BATERIA AUTOMÓVEL SELADA</text>
+  <text x="300" y="365" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">MÁXIMA POTÊNCIA DE ARRANQUE • BLACK UNIT</text>
+</svg>
