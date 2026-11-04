@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags de SEO -->
+    <title>Catálogo de Peças Automóveis | Black Unit Moçambique</title>
+    <meta name="description" content="Compre peças automóveis novas e usadas com garantia na Black Unit: alternadores, caixas de direção, motores de arranque, travões, suspensão e filtros. Encomende online via WhatsApp.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    
+    <!-- Folha de Estilos Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ======================================================================
+         CABEÇALHO / NAVEGAÇÃO
+         ====================================================================== -->
+    <header class="cabecalho-site">
+        <div class="container cabecalho-container">
+            <!-- Logótipo da Empresa -->
+            <a href="index.html" class="logotipo-link" title="Black Unit - Início">
+                <img src="img/logo.svg" alt="Logótipo Black Unit" class="logotipo-imagem">
+                <span class="logotipo-texto">Black <span>Unit</span></span>
+            </a>
+
+            <!-- Botão Hambúrguer para Telemóveis -->
+            <button class="btn-hamburguer" id="btn-menu-mobile" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu de Navegação -->
+            <nav class="nav-menu" id="menu-principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pecas.html" class="ativo">Peças de Carro</a></li>
+                    <li><a href="transporte-escolar.html">Transporte Escolar</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ======================================================================
+         FAIXA DE CONFIANÇA (TRUST BAR)
+         ====================================================================== -->
+    <section class="faixa-confianca-loja">
+        <div class="container">
+            <div class="grid-confianca">
+                <div class="item-confianca">
+                    <div class="item-confianca-icone">
+                        <svg class="icone-svg icone-svg-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </div>
+                    <div class="item-confianca-texto">
+                        <h4>Peças de Qualidade</h4>
+                        <p>Inspecionadas e com garantia</p>
+                    </div>
+                </div>
+                <div class="item-confianca">
+                    <div class="item-confianca-icone">
+                        <svg class="icone-svg icone-svg-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <div class="item-confianca-texto">
+                        <h4>Atendimento Rápido</h4>
+                        <p>Cotações no WhatsApp em minutos</p>
+                    </div>
+                </div>
+                <div class="item-confianca">
+                    <div class="item-confianca-icone">
+                        <svg class="icone-svg icone-svg-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="10" x="1" y="5" rx="2"/><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/><path d="M15 9h4l3 3v3h-2"/></svg>
+                    </div>
+                    <div class="item-confianca-texto">
+                        <h4>Entrega Disponível</h4>
+                        <p>Maputo, Matola e Províncias</p>
+                    </div>
+                </div>
+                <div class="item-confianca">
+                    <div class="item-confianca-icone">
+                        <svg class="icone-svg icone-svg-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <div class="item-confianca-texto">
+                        <h4>Apoio Técnico</h4>
+                        <p>Aconselhamento na compatibilidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         BANNER DA PÁGINA
+         ====================================================================== -->
+    <section class="banner-pagina" style="padding: 3rem 0 2rem 0;">
+        <div class="container">
+            <span class="subtitulo-seccao">Loja de Peças & Acessórios</span>
+            <h1>Catálogo Automóvel <span>Black Unit</span></h1>
+            <p>
+                Encontre a peça certa para a sua viatura em segundos. Filtre por marca, modelo, ano ou categoria e solicite o seu pedido diretamente pelo WhatsApp.
+            </p>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         PESQUISA POR VIATURA ("Escolha a sua Viatura")
+         ====================================================================== -->
+    <section class="seccao-seletor-viatura">
+        <div class="container">
+            <div class="caixa-seletor-viatura">
+                <div class="seletor-viatura-header">
+                    <svg class="icone-svg icone-svg-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 10.9 2 11.2 2 11.5V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+                    <h3>Escolha a sua <span>Viatura</span> para ver apenas peças compatíveis:</h3>
+                </div>
+
+                <form id="form-seletor-viatura" class="form-viatura-grid">
+                    <!-- Marca -->
+                    <div class="campo-viatura">
+                        <label for="viatura-marca">Marca do Veículo</label>
+                        <select id="viatura-marca" class="campo-select">
+                            <option value="">Todas as Marcas</option>
+                        </select>
+                    </div>
+
+                    <!-- Modelo / Versão -->
+                    <div class="campo-viatura">
+                        <label for="viatura-modelo">Modelo ou Motor (opcional)</label>
+                        <input type="text" id="viatura-modelo" class="campo-input" placeholder="Ex: Hilux, Hardbody, Ranger...">
+                    </div>
+
+                    <!-- Ano -->
+                    <div class="campo-viatura">
+                        <label for="viatura-ano">Ano de Fabrico</label>
+                        <select id="viatura-ano" class="campo-select">
+                            <option value="">Todos os Anos</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão de Aplicação -->
+                    <button type="submit" class="btn btn-destaque" style="height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                        <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        Filtrar Viatura
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         CATÁLOGO PRINCIPAL COM FILTROS E GRELHA
+         ====================================================================== -->
+    <section class="seccao" id="catalogo-produtos" style="padding-top: 2rem;">
+        <div class="container">
+            
+            <!-- Barra de Categorias em Chips / Botões -->
+            <div class="chips-categorias-wrapper" id="chips-categorias">
+                <!-- Preenchido dinamicamente pelo JavaScript (produtos.js / catalogo.js) -->
+            </div>
+
+            <!-- Barra de Controles: Pesquisa, Ordenação, Favoritos e Abertura Mobile -->
+            <div class="barra-controles-catalogo">
+                <!-- Caixa de Pesquisa em Tempo Real -->
+                <div class="pesquisa-box-catalogo">
+                    <span class="pesquisa-icone">
+                        <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </span>
+                    <input type="text" id="input-pesquisa-pecas" placeholder="Pesquisar por nome ou referência (ex: ALT-TY-90A, pastilhas, amortecedor)...">
+                    <button type="button" id="btn-limpar-pesquisa" class="btn-limpar-input" title="Limpar pesquisa">
+                        <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                </div>
+
+                <!-- Ações da Direita -->
+                <div class="controles-acoes-direita">
+                    <!-- Botão Filtros para Telemóvel -->
+                    <button type="button" class="btn btn-secundario btn-filtro-mobile-trigger" id="btn-abrir-drawer-filtros">
+                        <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="1" x2="7" y1="14" y2="14"/><line x1="9" x2="15" y1="8" y2="8"/><line x1="17" x2="23" y1="16" y2="16"/></svg>
+                        Filtros Avançados
+                    </button>
+
+                    <!-- Botão de Favoritos -->
+                    <button type="button" class="btn-fav-toggle" id="btn-ver-favoritos" title="Filtrar peças guardadas como favoritas">
+                        <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        Favoritos
+                    </button>
+
+                    <!-- Seletor de Ordenação -->
+                    <div class="ordenacao-box">
+                        <label for="select-ordenacao">Ordenar:</label>
+                        <select id="select-ordenacao" class="campo-select" style="padding: 0.6rem 0.8rem; font-size: 0.85rem;">
+                            <option value="recentes">Mais Recentes / Destaques</option>
+                            <option value="nome-asc">Nome: A - Z</option>
+                            <option value="nome-desc">Nome: Z - A</option>
+                            <option value="marca-asc">Marca do Veículo (A - Z)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Layout: Sidebar de Filtros (Desktop) + Grelha de Produtos -->
+            <div class="layout-catalogo-principal">
+                
+                <!-- PAINEL LATERAL DE FILTROS (Desktop) -->
+                <aside class="sidebar-filtros-desktop">
+                    <div class="sidebar-topo-header">
+                        <h3>Filtros Detalhados</h3>
+                        <button type="button" class="btn-limpar-link" id="btn-limpar-filtros">Limpar Tudo</button>
+                    </div>
+
+                    <!-- Filtro Marca -->
+                    <div class="grupo-filtro">
+                        <h4>Marca do Carro</h4>
+                        <select id="filtro-marca" class="campo-select">
+                            <option value="Todas">Todas as Marcas</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtro Ano -->
+                    <div class="grupo-filtro">
+                        <h4>Ano da Viatura</h4>
+                        <select id="filtro-ano" class="campo-select">
+                            <option value="Todos">Todos os Anos</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtro Estado (Nova / Usada) -->
+                    <div class="grupo-filtro">
+                        <h4>Estado da Peça</h4>
+                        <select id="filtro-estado" class="campo-select">
+                            <option value="Todos">Todos os Estados</option>
+                            <option value="Nova">Apenas Novas</option>
+                            <option value="Usada">Usadas / Recondicionadas</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtro Disponibilidade -->
+                    <div class="grupo-filtro">
+                        <h4>Disponibilidade</h4>
+                        <select id="filtro-disponibilidade" class="campo-select">
+                            <option value="Todas">Todas as Opções</option>
+                            <option value="Em stock">Pronta Entrega (Em stock)</option>
+                            <option value="Sob encomenda">Sob Encomenda</option>
+                        </select>
+                    </div>
+
+                    <!-- Caixa Informativa de Preço Sob Consulta -->
+                    <div class="grupo-filtro" style="background: rgba(229, 9, 20, 0.05); border: 1px solid rgba(229, 9, 20, 0.22); border-radius: var(--raio-borda-sm); padding: 1.1rem; margin-top: 0.5rem;">
+                        <h4 style="color: var(--cor-destaque); margin-bottom: 0.5rem; font-size: 0.92rem; display: flex; align-items: center; gap: 0.4rem;">
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            Preço Sob Consulta
+                        </h4>
+                        <p style="font-size: 0.82rem; color: var(--cor-texto-secundario); line-height: 1.45; margin-bottom: 0.85rem;">
+                            Como os valores das peças variam consoante o lote e o modelo do seu carro, fornecemos a cotação imediata em Meticais (MT) no WhatsApp.
+                        </p>
+                        <a href="#" data-whatsapp="pecas" class="btn btn-whatsapp" style="width: 100%; font-size: 0.82rem; padding: 0.6rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                            <svg class="icone-svg icone-svg-sm icone-svg-fill" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                            Pedir Cotação Rápida
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- ÁREA DE PRODUTOS -->
+                <main>
+                    <div class="topo-grid-catalogo">
+                        <span class="contador-resultados" id="contador-resultados">A carregar catálogo...</span>
+                    </div>
+
+                    <!-- Grelha de Produtos (Injetada pelo catalogo.js) -->
+                    <div class="grid-loja-produtos" id="grid-catalogo-produtos">
+                        <!-- Os cartões de produtos são criados dinamicamente via JavaScript -->
+                    </div>
+
+                    <!-- Botão Ver Mais (Paginação) -->
+                    <div class="container-ver-mais" id="container-ver-mais" style="display: none;"></div>
+                </main>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         GAVETA DE FILTROS PARA TELEMÓVEL (DRAWER MOBILE)
+         ====================================================================== -->
+    <div class="drawer-filtros-mobile" id="drawer-filtros">
+        <div class="drawer-filtros-conteudo">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+                <h3 style="font-size: 1.2rem; font-weight: 800;">Filtros de Pesquisa</h3>
+                <button type="button" id="btn-fechar-drawer-filtros" class="btn-fechar-modal-x" style="position: static;" aria-label="Fechar filtros">
+                    <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+            </div>
+            <p style="color: var(--cor-texto-secundario); font-size: 0.85rem; margin-bottom: 1rem;">
+                Ajuste os filtros para encontrar a peça compatível com o seu veículo:
+            </p>
+            <button type="button" class="btn btn-destaque" style="width: 100%; margin-top: 1rem;" onclick="document.getElementById('drawer-filtros').classList.remove('ativo'); document.body.style.overflow = '';">
+                Ver Resultados
+            </button>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         JANELA MODAL DE DETALHES DO PRODUTO
+         ====================================================================== -->
+    <div class="modal-backdrop" id="modal-detalhes-produto" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-peca">
+        <div class="modal-conteudo-produto">
+            <button type="button" class="btn-fechar-modal-x" id="btn-fechar-modal" aria-label="Fechar detalhes">
+                <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <div id="conteudo-modal-produto">
+                <!-- Conteúdo preenchido dinamicamente ao clicar em "Detalhes" -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         CARRINHO DE ENCOMENDA MULTI-PEÇAS (DRAWER LATERAL)
+         ====================================================================== -->
+    <div class="drawer-carrinho-overlay" id="drawer-carrinho">
+        <div class="drawer-carrinho-conteudo">
+            <div class="drawer-carrinho-header">
+                <h3 style="display: flex; align-items: center; gap: 0.5rem;">
+                    <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    Lista de Cotação
+                </h3>
+                <button type="button" id="btn-fechar-carrinho" class="btn-fechar-modal-x" style="position: static;" aria-label="Fechar carrinho">
+                    <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+            </div>
+
+            <!-- Lista de Produtos Adicionados -->
+            <div class="lista-carrinho-itens-scroll" id="lista-itens-carrinho">
+                <!-- Injetado dinamicamente via JS -->
+            </div>
+
+            <!-- Rodapé do Carrinho com Subtotal e Botão WhatsApp -->
+            <div class="drawer-carrinho-rodape">
+                <div class="carrinho-subtotal-linha">
+                    <span>Cotação do Pedido:</span>
+                    <span id="carrinho-total-valor">0 Peças</span>
+                </div>
+                <button type="button" id="btn-enviar-pedido-whatsapp" class="btn btn-whatsapp" style="width: 100%; padding: 0.95rem; font-size: 1rem; margin-bottom: 0.75rem;">
+                    <svg class="btn-icone" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    Enviar Pedido pelo WhatsApp
+                </button>
+                <button type="button" id="btn-esvaziar-carrinho" class="btn-limpar-link" style="display: block; width: 100%; text-align: center; color: var(--cor-texto-secundario);">
+                    Esvaziar lista
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÃO FLUTUANTE DO CARRINHO DE COTAÇÃO -->
+    <button type="button" class="carrinho-flutuante-btn" id="btn-abrir-carrinho" aria-label="Ver carrinho de cotação">
+        <svg class="icone-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+        <span class="badge-carrinho-qtd" id="badge-carrinho-qtd" style="display: none;">0</span>
+    </button>
+
+    <!-- ======================================================================
+         SECÇÃO "NÃO ENCONTROU A PEÇA?"
+         ====================================================================== -->
+    <section class="seccao-peca-personalizada">
+        <div class="container">
+            <div class="caixa-peca-personalizada">
+                <div>
+                    <span class="subtitulo-seccao">Serviço Sob Encomenda</span>
+                    <h2 class="titulo-seccao">Não encontrou a peça exata que procura?</h2>
+                    <br>
+                    <p style="color: var(--cor-texto-secundario); font-size: 1rem; line-height: 1.6;">
+                        Temos uma ampla rede de parceiros e fornecedores em Moçambique, África do Sul e Dubai. Se a peça não está listada no catálogo, nós localizamos e importamos para si com garantia.
+                    </p>
+                </div>
+
+                <form id="form-peca-personalizada" class="form-personalizada-grid">
+                    <div class="grupo-campo">
+                        <label for="input-peca-nome">Nome da Peça ou Referência *</label>
+                        <input type="text" id="input-peca-nome" class="campo-input" placeholder="Ex: Bomba de Água, Radiador, Sensor MAF..." required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="input-peca-carro">Marca e Modelo da Viatura *</label>
+                        <input type="text" id="input-peca-carro" class="campo-input" placeholder="Ex: Toyota Prado 150 / Nissan Hardbody" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="input-peca-ano">Ano de Fabrico (Aprox.)</label>
+                        <input type="text" id="input-peca-ano" class="campo-input" placeholder="Ex: 2014">
+                    </div>
+
+                    <button type="submit" class="btn btn-whatsapp">
+                        <svg class="btn-icone" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                        Entrar em contacto pelo WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         SECÇÃO DE PERGUNTAS FREQUENTES (FAQ)
+         ====================================================================== -->
+    <section class="seccao seccao-faq-loja">
+        <div class="container">
+            <div class="cabecalho-seccao">
+                <span class="subtitulo-seccao">Tire as Suas Dúvidas</span>
+                <h2 class="titulo-seccao">Perguntas Frequentes sobre a Compra de Peças</h2>
+            </div>
+
+            <div class="faq-accordion">
+                <!-- Pergunta 1 -->
+                <div class="item-faq ativo">
+                    <div class="item-faq-pergunta">
+                        <span>1. Como encomendar ou comprar uma peça?</span>
+                        <span class="item-faq-icone-seta">
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </div>
+                    <div class="item-faq-resposta">
+                        <p>É muito simples: basta clicar em "Pedir no WhatsApp" na peça desejada (ou adicionar várias ao pedido e enviar a lista completa). A nossa equipa verifica a disponibilidade imediata, envia fotos reais do produto se necessário e combina o levantamento ou entrega.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="item-faq">
+                    <div class="item-faq-pergunta">
+                        <span>2. Quais são as formas de pagamento aceites em Moçambique?</span>
+                        <span class="item-faq-icone-seta">
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </div>
+                    <div class="item-faq-resposta">
+                        <p>Aceitamos pagamentos por <strong>M-Pesa</strong>, <strong>E-Mola</strong>, transferência bancária direta (BIM, BCI, Standard Bank, Moza) e pagamento em dinheiro no ato de levantamento no balcão.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="item-faq">
+                    <div class="item-faq-pergunta">
+                        <span>3. Fazem entregas fora de Maputo e Matola?</span>
+                        <span class="item-faq-icone-seta">
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </div>
+                    <div class="item-faq-resposta">
+                        <p>Sim! Fazemos entregas rápidas na região de Maputo e Matola e enviamos peças para todas as províncias de Moçambique (Gaza, Inhambane, Sofala, Manica, Tete, Zambézia, Nampula, Cabo Delgado e Niassa) através de transportadoras rodoviárias de confiança.</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="item-faq">
+                    <div class="item-faq-pergunta">
+                        <span>4. As peças têm garantia?</span>
+                        <span class="item-faq-icone-seta">
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </div>
+                    <div class="item-faq-resposta">
+                        <p>Todas as peças novas têm garantia contra defeitos de fabrico (de 3 a 12 meses conforme o componente). Para peças usadas ou recondicionadas, fornecemos garantia de teste e funcionamento no ato da instalação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         RODAPÉ (COMUM A TODAS AS PÁGINAS)
+         ====================================================================== -->
+    <footer class="rodape-site">
+        <div class="container">
+            <div class="grid-rodape">
+                <div class="rodape-coluna rodape-sobre">
+                    <a href="index.html" class="logotipo-link">
+                        <img src="img/logo.svg" alt="Logótipo Black Unit" class="logotipo-imagem">
+                        <span class="logotipo-texto">Black <span>Unit</span></span>
+                    </a>
+                    <p>
+                        Venda de peças para automóveis em Moçambique com integridade, procedência e preços justos.
+                    </p>
+                </div>
+
+                <div class="rodape-coluna rodape-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="pecas.html">Peças de Carro</a></li>
+                        <li><a href="transporte-escolar.html">Transporte Escolar</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="rodape-coluna rodape-links">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#catalogo-produtos">Alternadores</a></li>
+                        <li><a href="#catalogo-produtos">Caixas de Direção</a></li>
+                        <li><a href="#catalogo-produtos">Motores de Arranque</a></li>
+                        <li><a href="#catalogo-produtos">Travões e Suspensão</a></li>
+                    </ul>
+                </div>
+
+                <div class="rodape-coluna rodape-contactos">
+                    <h4>Atendimento</h4>
+                    <ul class="lista-contactos-rodape">
+                        <li>
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Moçambique</span>
+                        </li>
+                        <li>
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+258 84 000 0000</span>
+                        </li>
+                        <li>
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>contacto@blackunit.co.mz</span>
+                        </li>
+                        <li>
+                            <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span>Seg - Sex: 07:30 - 17:30</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rodape-direitos">
+                <p>&copy; <span id="ano-atual">2026</span> Black Unit. Todos os direitos reservados. Moçambique.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DE WHATSAPP -->
+    <a href="#" data-whatsapp="pecas" class="whatsapp-flutuante" aria-label="Pedir cotação de peças pelo WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+    </a>
+
+    <!-- Ficheiros JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
