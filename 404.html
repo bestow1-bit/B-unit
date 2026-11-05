@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <title>Página Não Encontrada (404) | Black Unit Moçambique</title>
+    <meta name="description" content="A página que procura não foi encontrada. Regresse à página principal da Black Unit para encontrar peças automóveis e transporte escolar em Moçambique.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Favicon Oficial -->
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+
+    <!-- Folha de Estilos Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho-site">
+        <div class="container barra-navegacao">
+            <a href="index.html" class="logotipo-link">
+                <img src="img/logo.svg" alt="Logótipo Black Unit" class="logotipo-imagem" width="40" height="40">
+                <span class="logotipo-texto">Black <span>Unit</span></span>
+            </a>
+
+            <nav class="menu-navegacao" id="menu-principal" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="pecas.html">Peças de Carro</a></li>
+                    <li><a href="transporte-escolar.html">Transporte Escolar</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL 404 -->
+    <main class="container" style="min-height: 65vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 1.5rem;">
+        <div style="background: var(--cor-fundo-card); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); padding: 3rem 2rem; max-width: 600px; width: 100%; box-shadow: var(--sombra-card);">
+            <div style="font-size: 5rem; font-weight: 800; color: var(--cor-destaque); line-height: 1; margin-bottom: 1rem;">
+                404
+            </div>
+            
+            <h1 style="font-size: 1.75rem; color: var(--cor-texto-principal); margin-bottom: 1rem;">
+                Página Não Encontrada
+            </h1>
+            
+            <p style="color: var(--cor-texto-secundario); font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem;">
+                O endereço que tentou aceder não existe ou foi alterado. Use os botões abaixo para regressar ao início ou fale connosco diretamente no WhatsApp oficial.
+            </p>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-primario" style="min-width: 180px;">
+                    Voltar ao Início
+                </a>
+                <a href="https://wa.me/258866211120?text=Ol%C3%A1%20Black%20Unit!%20Procurei%20uma%20p%C3%A1gina%20no%20site%20e%20n%C3%A3o%20encontrei." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="min-width: 180px; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                    <svg class="icone-svg icone-svg-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    Apoio no WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape-site">
+        <div class="container">
+            <div class="rodape-inferior" style="text-align: center; border-top: 1px solid var(--cor-borda); padding-top: 1.5rem;">
+                <p>&copy; <span id="ano-atual">2026</span> Black Unit. Todos os direitos reservados. Moçambique.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

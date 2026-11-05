@@ -686,8 +686,10 @@ ul {
 /* Passos "Como Funciona" */
 .grid-passos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
 .card-passo {
@@ -1112,7 +1114,8 @@ ul {
     }
 
     .grid-passos {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
     .grid-diferenciais {
@@ -2720,7 +2723,7 @@ ul {
     margin-bottom: 1.25rem;
 }
 
-/* --- LINHA DO TEMPO DA ROTA (CUMBEZA -> FÁCIM) --- */
+/* --- LINHA DO TEMPO DA ROTA (FÁCIM -> ZIMPETO) --- */
 .timeline-rotas-wrap {
     margin-top: 2rem;
     background-color: var(--cor-fundo-card);
@@ -2828,7 +2831,7 @@ ul {
     line-height: 1.4;
 }
 
-/* Aviso de Zonas Além do Fácim */
+/* Aviso de Zonas Além do Percurso Principal */
 .aviso-rota-alem {
     background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, rgba(21, 24, 30, 0.8) 100%);
     border-left: 4px solid var(--cor-destaque);
@@ -3397,4 +3400,194 @@ ul {
 .faq-item.ativo .faq-resposta {
     max-height: 300px;
     padding: 0 1.5rem 1.25rem 1.5rem;
+}
+
+
+/* ==========================================================================
+   ANIMAÇÕES SUAVES, ACESSIBILIDADE E REGRAS DE SEGURANÇA
+   ========================================================================== */
+
+/* 1. Animações de Scroll (Fade In e Deslize Discreto) */
+.animar-ao-scroll {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.animar-ao-scroll.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. Micro-interações de Hover nos Cartões e Imagens */
+.card-produto-loja,
+.beneficio-item,
+.card-escola,
+.cartao-caracteristica,
+.card-servico,
+.item-contacto,
+.faq-item {
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.card-produto-loja:hover,
+.beneficio-item:hover,
+.card-escola:hover,
+.card-servico:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+.produto-foto-wrap {
+    overflow: hidden;
+}
+
+.produto-foto {
+    transition: transform 0.4s ease;
+}
+
+.card-produto-loja:hover .produto-foto {
+    transform: scale(1.03);
+}
+
+/* 3. Transição Suave nos Botões */
+.btn,
+.btn-whatsapp,
+.btn-primario,
+.btn-secundario,
+.btn-carrinho-adicionar,
+.btn-filtrar-gaveta {
+    transition: transform 0.2s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.btn:hover,
+.btn-whatsapp:hover,
+.btn-primario:hover,
+.btn-secundario:hover {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.btn:active,
+.btn-whatsapp:active {
+    transform: translateY(0) scale(0.99);
+}
+
+/* 4. Pulso Discreto nos Botões Flutuantes (WhatsApp e Carrinho) */
+@keyframes pulso-discreto-wa {
+    0%, 100% {
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+    }
+    50% {
+        box-shadow: 0 4px 26px rgba(37, 211, 102, 0.65), 0 0 0 5px rgba(37, 211, 102, 0.18);
+    }
+}
+
+@keyframes pulso-discreto-carrinho {
+    0%, 100% {
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 24px rgba(245, 158, 11, 0.6), 0 0 0 5px rgba(245, 158, 11, 0.16);
+    }
+}
+
+.btn-flutuante-whatsapp,
+.whatsapp-flutuante {
+    animation: pulso-discreto-wa 3.8s infinite ease-in-out;
+}
+
+.btn-carrinho-flutuante {
+    animation: pulso-discreto-carrinho 4.2s infinite ease-in-out;
+}
+
+/* 5. Linha do Tempo da Rota Animada */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-item.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 6. Acessibilidade: Navegação por Teclado e Touch Targets */
+:focus-visible {
+    outline: 2px solid var(--cor-destaque) !important;
+    outline-offset: 3px !important;
+}
+
+button, a, input, select, textarea {
+    touch-action: manipulation;
+}
+
+/* 7. Mensagens de Sucesso e Erro do Formulário */
+.form-feedback {
+    display: none;
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--raio-borda);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+.form-feedback.sucesso {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(37, 211, 102, 0.14);
+    border: 1px solid var(--cor-whatsapp);
+    color: #4ade80;
+}
+
+.form-feedback.erro {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(239, 68, 68, 0.14);
+    border: 1px solid #ef4444;
+    color: #f87171;
+}
+
+/* 8. Prevenção de Sobreposição em Telemóveis */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 96px; /* Margem de segurança para nunca sobrepor conteúdo */
+    }
+    
+    .btn-flutuante-whatsapp,
+    .whatsapp-flutuante {
+        bottom: 16px !important;
+        right: 16px !important;
+        z-index: 990 !important;
+    }
+    
+    .btn-carrinho-flutuante {
+        bottom: 80px !important;
+        right: 16px !important;
+        z-index: 989 !important;
+    }
+}
+
+/* 9. Respeito ao prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .animar-ao-scroll,
+    .timeline-item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    .btn-flutuante-whatsapp,
+    .whatsapp-flutuante,
+    .btn-carrinho-flutuante {
+        animation: none !important;
+    }
 }
