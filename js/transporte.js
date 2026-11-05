@@ -14,7 +14,7 @@
    ========================================================================== */
 const NUMERO_WHATSAPP_TRANSPORTE = (typeof CONFIG_WHATSAPP !== 'undefined' && CONFIG_WHATSAPP.numero) 
     ? CONFIG_WHATSAPP.numero 
-    : "258840000000"; /* <-- EDITAR AQUI O SEU NÚMERO (Ex.: 258841234567) */
+    : "258866211120"; /* Contacto oficial Black Unit (+258 86 621 1120) */
 
 /* ==========================================================================
    2. ARRAY DE ESCOLAS ATENDIDAS (ADICIONE OU EDITE NOVAS ESCOLAS AQUI)
@@ -23,7 +23,7 @@ const ESCOLAS_ATENDIDAS = [
     {
         id: "comunhao-colheita",
         nome: "Escola Comunitária Comunhão na Colheita (Arco-Íris)",
-        zona: "Cumbeza / Zona Norte",
+        zona: "Zimpeto",
         icone: "graduation-cap", /* Pode ser: "graduation-cap" ou "school" */
         descricao: "Transporte escolar dedicado com recolha porta-a-porta e acompanhamento rigoroso de monitora.",
         horarios: "Manhã (06:30 - 07:15) | Regresso (12:30 / 17:00)",
@@ -35,7 +35,7 @@ const ESCOLAS_ATENDIDAS = [
         nome: "Escola / Colégio Mais Saber",
         zona: "Zimpeto",
         icone: "school",
-        descricao: "Percurso direto e seguro ao longo do corredor Cumbeza-Zimpeto com horários rigorosos de chegada.",
+        descricao: "Percurso direto e seguro ao longo do corredor Fácim-Zimpeto com horários rigorosos de chegada.",
         horarios: "Manhã (06:30 - 07:15) | Regresso (12:30 / 17:00)",
         turnos: "Turno da Manhã e Turno da Tarde",
         vagasDisponiveis: true
@@ -138,7 +138,7 @@ function renderizarEscolas() {
             </div>
             <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--cor-texto-principal);">Outras Escolas?</h3>
             <p style="color: var(--cor-texto-secundario); font-size: 0.92rem; margin-bottom: 1.5rem; max-width: 300px;">
-                O seu filho estuda noutra instituição ao longo da nossa rota? Consulte a viabilidade de nova paragem.
+                O seu filho estuda noutra instituição ao longo da rota Fácim - Zimpeto? Fale connosco no WhatsApp.
             </p>
             <a href="${linkOutras}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                 <svg class="icone-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -207,8 +207,7 @@ function inicializarPesquisaRotaBairro() {
         // Mensagem exata solicitada: "Olá, gostaria de saber se atendem o bairro [bairro] para a escola [escola]."
         const mensagem = `Olá, gostaria de saber se atendem o bairro ${bairro} ${escolaTexto}.`;
         const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP_TRANSPORTE}?text=${encodeURIComponent(mensagem)}`;
-
-        window.open(urlWhatsApp, "_blank");
+        window.open(urlWhatsApp, "_blank", "noopener,noreferrer");
     });
 }
 
@@ -244,7 +243,7 @@ function inicializarFormularioReserva() {
         texto += `\nAguardo a confirmação da rota, disponibilidade de vaga e valor mensal. Obrigado!`;
 
         const url = `https://wa.me/${NUMERO_WHATSAPP_TRANSPORTE}?text=${encodeURIComponent(texto)}`;
-        window.open(url, "_blank");
+        window.open(url, "_blank", "noopener,noreferrer");
     });
 }
 

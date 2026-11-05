@@ -1,0 +1,27 @@
+# Dependências e ambientes
+node_modules/
+__pycache__/
+*.pyc
+
+# Configurações de ambiente e segredos
+.env
+.env.local
+.env.*
+*.secret
+
+# Ficheiros do sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs e Ficheiros Temporários
+*.log
+*.tmp
+scratch/
+.system_generated/

@@ -17,7 +17,7 @@
    ========================================================================== */
 const CONFIG_LOJA = {
     // Número oficial de WhatsApp (formato internacional sem + ou espaços: 258XXXXXXXXX)
-    numeroWhatsApp: "258840000000", /* <-- EDITAR AQUI O SEU NÚMERO */
+    numeroWhatsApp: "258866211120", /* Contacto oficial Black Unit: +258 86 621 1120 */
 
     // Texto predefinido no lugar de preços fixos
     textoPreco: "Entrar em Contacto",
@@ -68,7 +68,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "INJ-TY-29400",
-        imagem: "img/bomba-injetora.jpg",
+        imagem: "img/pecas/bomba-injetora-diesel-toyota.webp",
         descricaoCurta: "Bomba injetora de alta pressão para motores diesel D-4D, com débito preciso e economia de combustível.",
         descricaoDetalhada: "Bomba de alta pressão com calibração digital. Garante arranque imediato a frio, queima limpa de diesel e pressão constante até 2000 bar. Tratada contra impurezas do gasóleo nacional.",
         especificacoes: [
@@ -93,7 +93,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "CAB-TY-1KD",
-        imagem: "img/bomba-injetora.jpg",
+        imagem: "img/pecas/cabecote-motor-toyota.webp",
         descricaoCurta: "Cabeçote de cilindros completo com válvulas montadas, retentores e guias de alta resistência térmica.",
         descricaoDetalhada: "Fundição em liga de alumínio de alta densidade testada contra microfissuras. Inclui árvore de cames, válvulas de admissão e escape já retificadas e assentadas para instalação imediata.",
         especificacoes: [
@@ -118,7 +118,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "DIST-ISZ-KB300",
-        imagem: "img/filtros-revisao.jpg",
+        imagem: "img/pecas/kit-distribuicao-bomba-agua-isuzu.webp",
         descricaoCurta: "Kit de correia dentada, tensores automáticos e bomba de água reforçada para revisão preventiva.",
         descricaoDetalhada: "Conjunto original fabricado com polímeros resistentes a calor e atrito contínuo. Garante sincronismo milimétrico do motor e refrigeração sem fugas.",
         especificacoes: [
@@ -143,7 +143,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Sob encomenda",
         referencia: "TRB-TY-1GD",
-        imagem: "img/bomba-injetora.jpg",
+        imagem: "img/pecas/placeholder.webp",
         descricaoCurta: "Turbo de geometria variável para aceleração potente e resposta rápida sem quebras de binário.",
         descricaoDetalhada: "Equipado com eixo de titânio equilibrado eletronicamente e atuador passo-a-passo. Fornece pressão estável mesmo em viagens longas e subidas íngremes.",
         especificacoes: [
@@ -172,7 +172,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "DSC-TY-319V",
-        imagem: "img/disco-travao.jpg",
+        imagem: "img/pecas/discos-travao-ventilados-toyota.webp",
         descricaoCurta: "Discos com ventilação direcional e canais anti-aquecimento para travagens firmes.",
         descricaoDetalhada: "Fundição em ferro nodular com tratamento anti-ferrugem e ranhuras de arrefecimento. Elimina trepidações no pedal e suporta o esforço de carga e reboques.",
         especificacoes: [
@@ -197,7 +197,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "PST-NS-HB4P",
-        imagem: "img/disco-travao.jpg",
+        imagem: "img/pecas/pastilhas-travao-ceramicas-nissan.webp",
         descricaoCurta: "Pastilhas cerâmicas de alta aderência, silenciosas e sem libertação de poeiras pretas.",
         descricaoDetalhada: "Composto cerâmico resistente a temperaturas superiores a 650°C. Com chapas anti-ruído (shims) em aço inox e chanfros de dissipação térmica.",
         especificacoes: [
@@ -222,7 +222,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "CIL-MIT-TRT",
-        imagem: "img/disco-travao.jpg",
+        imagem: "img/pecas/cilindro-mestre-travao-mitsubishi.webp",
         descricaoCurta: "Bomba principal de travão com reservatório e êmbolos duplos para máxima pressão hidráulica.",
         descricaoDetalhada: "Corpo em alumínio anodizado resistente à corrosão por fluido de travões DOT4. Retentores internos em borracha EPDM para resposta rápida e pedal consistente.",
         especificacoes: [
@@ -251,7 +251,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "CD-TY-HLX44",
-        imagem: "img/caixa-de-direcao.jpg",
+        imagem: "img/pecas/caixa-direcao-hidraulica-toyota.webp",
         descricaoCurta: "Caixa de direção completa para condução suave, firme e sem folgas no volante.",
         descricaoDetalhada: "Conjunto completo com cremalheira retificada, retentores de alta pressão em borracha nitrílica e terminais axiais incluídos. Testada e aprovada contra fugas hidráulicas.",
         especificacoes: [
@@ -276,7 +276,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "AMT-FRD-RGHD",
-        imagem: "img/amortecedor.jpg",
+        imagem: "img/pecas/amortecedores-gas-dianteiros-ford.webp",
         descricaoCurta: "Amortecedores pressurizados com nitrogénio para estabilidade total em picadas e asfalto.",
         descricaoDetalhada: "Pistão duplo de 35 mm e óleo hidráulico de baixa viscosidade com carga de gás nitrogénio. Elimina balanços excessivos e absorve impactos de buracos e pedras com conforto.",
         especificacoes: [
@@ -301,7 +301,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "FXM-TY-LC79",
-        imagem: "img/amortecedor.jpg",
+        imagem: "img/pecas/feixe-molas-traseiro-toyota.webp",
         descricaoCurta: "Feixe de molas multi-lâminas em aço carbono temperado para suporte de carga pesada.",
         descricaoDetalhada: "Com lâmina de reforço adicional e tratamento anticorrosão por cataforese. Suporta cargas elevadas sem perder altura do chassis nem comprometer o conforto vazio.",
         especificacoes: [
@@ -326,7 +326,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "BRC-ISZ-DMAX",
-        imagem: "img/amortecedor.jpg",
+        imagem: "img/pecas/placeholder.webp",
         descricaoCurta: "Triângulo de suspensão inferior forjado com rótula e sinoblocos prensados de fábrica.",
         descricaoDetalhada: "Aço estampado de alta resistência mecânica para manter o alinhamento de direção e geometria corretos, mesmo em terrenos irregulares.",
         especificacoes: [
@@ -355,7 +355,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "EMB-TY-260MM",
-        imagem: "img/disco-travao.jpg",
+        imagem: "img/pecas/kit-embraiagem-reforcado-toyota.webp",
         descricaoCurta: "Kit completo de embraiagem reforçada com molas temperadas e disco de atrito orgânico.",
         descricaoDetalhada: "Fabricado pela Exedy / Valeo com especificações OE. Prensa balanceada para engate macio, sem trepidações e sem patinar sob reboque.",
         especificacoes: [
@@ -380,7 +380,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "SMX-NS-D40",
-        imagem: "img/amortecedor.jpg",
+        imagem: "img/pecas/semi-eixo-dianteiro-nissan.webp",
         descricaoCurta: "Eixo de tração 4x4 completo com foles em silicone e esferas de aço temperado.",
         descricaoDetalhada: "Transmite o binário do diferencial para as rodas com folga zero. Foles resistentes a rasgos causados por ramos, pedras e areia fina.",
         especificacoes: [
@@ -405,7 +405,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Sob encomenda",
         referencia: "VLT-FRD-32B",
-        imagem: "img/disco-travao.jpg",
+        imagem: "img/pecas/placeholder.webp",
         descricaoCurta: "Volante de motor com molas de torção internas para proteger a caixa de velocidades.",
         descricaoDetalhada: "Absorve as vibrações rotacionais do motor de 5 cilindros, garantindo silêncio no habitáculo e trocas de caixa suaves.",
         especificacoes: [
@@ -434,7 +434,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "ALT-TY-90A",
-        imagem: "img/ALTERNADOR.jpeg",
+        imagem: "img/pecas/alternador-12v-reforcado-toyota.webp",
         descricaoCurta: "Alternador de alta performance para reposição direta com recarga estável da bateria.",
         descricaoDetalhada: "Enrolamento 100% em cobre reforçado e regulador eletrónico de tensão de alta precisão. Resistente a altas temperaturas, poeira e vibrações das estradas moçambicanas.",
         especificacoes: [
@@ -459,7 +459,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "ARR-TY-22KW",
-        imagem: "img/motor-de-arranque.jpg",
+        imagem: "img/pecas/motor-arranque-12v-toyota.webp",
         descricaoCurta: "Motor de arranque com redução planetária para partidas instantâneas em qualquer temperatura.",
         descricaoDetalhada: "Solenoide blindado e engrenagem de acionamento em aço cementado. Garante rotação rápida do virabrequim com baixo consumo de corrente elétrica.",
         especificacoes: [
@@ -484,7 +484,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "BAT-BU-70SMF",
-        imagem: "img/bateria-automovel.jpg",
+        imagem: "img/pecas/bateria-automovel-12v.webp",
         descricaoCurta: "Bateria selada livre de manutenção com tecnologia de grelhas de cálcio e indicador de carga.",
         descricaoDetalhada: "Construção reforçada com placas de chumbo espessas resistentes a vibrações severas e calor tropical. Olho mágico (hidrómetro) para verificação rápida de carga.",
         especificacoes: [
@@ -509,7 +509,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "SNS-NS-MAF01",
-        imagem: "img/ALTERNADOR.jpeg",
+        imagem: "img/pecas/sensor-massa-ar-nissan.webp",
         descricaoCurta: "Sensor eletrónico de precisão para medição correta da mistura ar-combustível.",
         descricaoDetalhada: "Restaura o consumo original de combustível, elimina falhas na aceleração e apaga luz de avaria no painel (Check Engine).",
         especificacoes: [
@@ -538,7 +538,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "AC-TY-10S17C",
-        imagem: "img/caixadeac.jpg",
+        imagem: "img/pecas/compressor-ar-condicionado-toyota.webp",
         descricaoCurta: "Compressor de AC com embraiagem magnética para refrigeração gelada no verão de Moçambique.",
         descricaoDetalhada: "Modelo Denso 10S17C testado a gás R134a sob alta pressão. Baixo ruído de funcionamento e acoplamento suave sem roubar potência ao motor.",
         especificacoes: [
@@ -563,7 +563,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "RAD-ISZ-DMAX30",
-        imagem: "img/caixadeac.jpg",
+        imagem: "img/pecas/radiador-agua-aluminio-isuzu.webp",
         descricaoCurta: "Radiador com colmeia de alta dissipação para evitar aquecimentos em trânsito e carga pesada.",
         descricaoDetalhada: "Tubos de alumínio com aletas reforçadas e caixas plásticas termo-resistentes. Conexões para tubagens de caixa automática integradas.",
         especificacoes: [
@@ -588,7 +588,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "VEN-NS-D22",
-        imagem: "img/caixadeac.jpg",
+        imagem: "img/pecas/eletroventilador-duplo-radiador-nissan.webp",
         descricaoCurta: "Conjunto de ventoinhas com carcaça de arrefecimento rápido para o radiador e condensador.",
         descricaoDetalhada: "Motor selado elétrico de baixo consumo com pás curvadas aerodinâmicas para máximo fluxo de ar em marcha lenta.",
         especificacoes: [
@@ -617,7 +617,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "KIT-FLT-TY03",
-        imagem: "img/filtros-revisao.jpg",
+        imagem: "img/pecas/placeholder.webp",
         descricaoCurta: "Conjunto completo de filtros de alta retenção para proteção do motor e bomba injetora.",
         descricaoDetalhada: "Papel de celulose microporosa com densidade graduada. Retém 99.8% de fuligem, partículas metálicas e água presente no combustível.",
         especificacoes: [
@@ -642,7 +642,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "FLT-ISZ-DSW",
-        imagem: "img/filtros-revisao.jpg",
+        imagem: "img/pecas/filtro-combustivel-diesel-isuzu.webp",
         descricaoCurta: "Filtro de gasóleo blindado com rosca para sensor de água no fundo do copo.",
         descricaoDetalhada: "Essencial para proteger bicos injetores sensíveis contra água e sedimentos comuns em depósitos de abastecimento.",
         especificacoes: [
@@ -667,7 +667,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "FLT-HAB-CRV",
-        imagem: "img/filtros-revisao.jpg",
+        imagem: "img/pecas/filtro-ar-habitaculo-carvao.webp",
         descricaoCurta: "Filtro antipólen e antipoeira com carvão ativado que neutraliza odores e fumos do trânsito.",
         descricaoDetalhada: "Mantém o ar interior da viatura puro e respirável, essencial para o bem-estar de crianças no transporte escolar e condutores alérgicos.",
         especificacoes: [
@@ -696,7 +696,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "LUB-SYN-5W30",
-        imagem: "img/oleo-motor.jpg",
+        imagem: "img/pecas/oleo-motor-sintetico-5w30.webp",
         descricaoCurta: "Lubrificante de alta tecnologia que protege o motor contra desgaste em temperaturas extremas.",
         descricaoDetalhada: "Pacote avançado de aditivos detergentes e dispersantes que mantêm os pistões limpos e reduzem o atrito no arranque a frio.",
         especificacoes: [
@@ -721,7 +721,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "LUB-ATF-WS1L",
-        imagem: "img/oleo-motor.jpg",
+        imagem: "img/pecas/fluido-transmissao-automatica-atf.webp",
         descricaoCurta: "Fluido sintético para caixas automáticas e sistemas de direção hidráulica assistida.",
         descricaoDetalhada: "Estabilidade térmica superior contra oxidação. Evita solavancos nas trocas de caixa e lubrifica a bomba de direção sem chiar.",
         especificacoes: [
@@ -746,7 +746,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "LUB-GL5-80W90",
-        imagem: "img/oleo-motor.jpg",
+        imagem: "img/pecas/valvolina-diferencial-80w90.webp",
         descricaoCurta: "Óleo para engrenagens hipoides de diferenciais sob esforço extremo e reboque.",
         descricaoDetalhada: "Aditivos EP (Extrema Pressão) com proteção contra soldaduras por atrito e desgaste de dentes de coroa e pinhão.",
         especificacoes: [
@@ -775,7 +775,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "FAR-TY-REVOLED",
-        imagem: "img/farolim-led.jpg",
+        imagem: "img/pecas/farolins-traseiros-led-toyota.webp",
         descricaoCurta: "Farolins traseiros fumados com iluminação contínua LED e sinalizadores dinâmicos.",
         descricaoDetalhada: "Lente em policarbonato com proteção UV contra amarelecimento solar. Plug & play sem necessidade de cortes na cablagem original.",
         especificacoes: [
@@ -800,7 +800,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "FRO-NS-NP300",
-        imagem: "img/farolim-led.jpg",
+        imagem: "img/pecas/farois-dianteiros-led-nissan.webp",
         descricaoCurta: "Óticas dianteiras de alta nitidez com projetores focados para condução noturna segura.",
         descricaoDetalhada: "Foco perfeito que não encandeia veículos em sentido contrário e amplia o campo visual na berma de estradas sem iluminação pública.",
         especificacoes: [
@@ -825,7 +825,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "RET-TY-VGCRM",
-        imagem: "img/farolim-led.jpg",
+        imagem: "img/pecas/espelhos-retrovisores-eletricos-toyota.webp",
         descricaoCurta: "Retrovisores rebatíveis eletricamente com capa cromada espelhada e piscas LED.",
         descricaoDetalhada: "Espelho convexo anti-reflexo com amplo ângulo de visão para eliminar ângulos mortos em manobras e trânsito intenso.",
         especificacoes: [
@@ -854,7 +854,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "JNT-OR-17X85",
-        imagem: "img/jante-offroad.jpg",
+        imagem: "img/pecas/jantes-liga-leve-offroad.webp",
         descricaoCurta: "Jantes em liga de alumínio fundido sob baixa pressão com acabamento preto mate texturado.",
         descricaoDetalhada: "Carga nominal de 1.150 kg por jante para suportar impactos de pedra, areia e piso severo. Furação padrão 6x139.7 comum às principais pick-ups em circulação.",
         especificacoes: [
@@ -879,7 +879,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "POR-SEG-M12",
-        imagem: "img/jante-offroad.jpg",
+        imagem: "img/pecas/porcas-roda-chave-segredo.webp",
         descricaoCurta: "Porcas cromadas de alta resistência mecânica com chave codificada contra furto de jantes.",
         descricaoDetalhada: "Fabricadas em aço carbono grau 10.9 tratado contra torção. Protege as suas jantes e pneus em estacionamentos públicos e viagens.",
         especificacoes: [
@@ -908,7 +908,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "SNK-TY-HLX44",
-        imagem: "img/farolim-led.jpg",
+        imagem: "img/pecas/placeholder.webp",
         descricaoCurta: "Snorkel em polietileno linear resistente aos raios solares para travessia de água e estradas de areia.",
         descricaoDetalhada: "Eleva o ponto de aspiração de ar do motor para a linha do tejadilho, reduzindo a entrada de poeira e prevenindo calços hidráulicos fatais ao atravessar rios ou poças profundas.",
         especificacoes: [
@@ -933,7 +933,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "BAR-TEJ-AL120",
-        imagem: "img/farolim-led.jpg",
+        imagem: "img/pecas/barras-transversais-tejadilho-aluminio.webp",
         descricaoCurta: "Barras de tejadilho aerodinâmicas com chave de segurança para bagageiras e cargas.",
         descricaoDetalhada: "Perfil em asa de avião de baixo ruído aerodinâmico. Suporta montagem de malas de tejadilho, escadas ou grades de expedição.",
         especificacoes: [
@@ -958,7 +958,7 @@ const LISTA_PRODUTOS = [
         estado: "Nova",
         disponibilidade: "Em stock",
         referencia: "PAL-SIL-PRM",
-        imagem: "img/farolim-led.jpg",
+        imagem: "img/pecas/palhetas-limpa-vidros-silicone.webp",
         descricaoCurta: "Escovas flexíveis sem armação metálica com lâmina de silicone de varrimento silencioso.",
         descricaoDetalhada: "Limpeza cristalina sem riscar o vidro nem chiar sob chuva intensa. Inclui adaptadores múltiplos compatíveis com 98% dos braços de limpa-vidros.",
         especificacoes: [
@@ -971,3 +971,19 @@ const LISTA_PRODUTOS = [
         novidade: false
     }
 ];
+
+/* ==========================================================================
+   FALLBACK: Placeholder para imagens em falta
+   Se a imagem de uma peça não existir, mostra uma imagem neutra em vez de
+   um ícone quebrado. Basta colocar um ficheiro "placeholder.webp" em img/pecas/.
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.grid-loja-produtos img, .grid-catalogo-produtos img').forEach(img => {
+        img.addEventListener('error', function() {
+            if (!this.dataset.fallback) {
+                this.dataset.fallback = 'true';
+                this.src = 'img/pecas/placeholder.webp';
+            }
+        });
+    });
+});

@@ -70,15 +70,31 @@ function carregarArmazenamentoLocal() {
     try {
         const favs = localStorage.getItem("blackunit_favoritos");
         if (favs) {
-            ESTADO_CATALOGO.favoritos = new Set(JSON.parse(favs));
+            const parsedFavs = JSON.parse(favs);
+            if (Array.isArray(parsedFavs)) {
+                // Sanitização e validação estrita contra XSS/poluição de dados
+                const safeFavs = parsedFavs.filter(id => Number.isInteger(id) && id > 0);
+                ESTADO_CATALOGO.favoritos = new Set(safeFavs);
+            }
         }
 
         const cart = localStorage.getItem("blackunit_carrinho");
         if (cart) {
-            ESTADO_CATALOGO.carrinho = JSON.parse(cart);
+            const parsedCart = JSON.parse(cart);
+            if (Array.isArray(parsedCart)) {
+                // Validação de integridade dos itens do carrinho
+                const safeCart = parsedCart.filter(item => 
+                    item && typeof item === 'object' &&
+                    Number.isInteger(item.id) && item.id > 0 &&
+                    Number.isInteger(item.quantidade) && item.quantidade > 0 && item.quantidade <= 99
+                );
+                ESTADO_CATALOGO.carrinho = safeCart;
+            }
         }
     } catch (e) {
-        console.warn("Erro ao ler localStorage:", e);
+        console.warn("Erro ao ler localStorage de forma segura:", e);
+        ESTADO_CATALOGO.favoritos = new Set();
+        ESTADO_CATALOGO.carrinho = [];
     }
 }
 
@@ -526,7 +542,7 @@ function renderizarCatalogo() {
                 <p>Não encontramos peças compatíveis com a sua pesquisa ou filtros selecionados.</p>
                 <div class="sem-resultados-botoes">
                     <button type="button" class="btn btn-destaque" onclick="resetarFiltros()">Limpar Filtros</button>
-                    <a href="https://wa.me/${CONFIG_LOJA.numeroWhatsApp}?text=${encodeURIComponent('Olá Black Unit! Procuro a seguinte peça e não encontrei no vosso site: ' + (ESTADO_CATALOGO.pesquisa || 'Peça Automóvel'))}" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    <a href="https://wa.me/${CONFIG_LOJA.numeroWhatsApp}?text=${encodeURIComponent('Olá Black Unit! Procuro a seguinte peça e não encontrei no vosso site: ' + (ESTADO_CATALOGO.pesquisa || 'Peça Automóvel'))}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                         ${ICONES.whatsapp} Pedir esta Peça no WhatsApp
                     </a>
                 </div>
@@ -553,7 +569,7 @@ function renderizarCatalogo() {
                         ${ICONES.heart}
                     </button>
 
-                    <img src="${produto.imagem}" alt="${produto.nome}" class="produto-foto" loading="lazy" onerror="this.onerror=null; this.src='img/disco-travao.jpg';">
+                    <img src="${produto.imagem}" alt="${produto.nome}" class="produto-foto" loading="lazy" onerror="this.onerror=null; this.src='img/pecas/placeholder.webp';">
                 </div>
 
                 <div class="produto-corpo">
@@ -654,7 +670,7 @@ function abrirModal(id) {
         <div class="modal-grid-detalhes">
             <div class="modal-foto-coluna">
                 <div class="modal-foto-wrap">
-                    <img src="${produto.imagem}" alt="${produto.nome}" class="modal-foto-principal" onerror="this.onerror=null; this.src='img/disco-travao.jpg';">
+                    <img src="${produto.imagem}" alt="${produto.nome}" class="modal-foto-principal" onerror="this.onerror=null; this.src='img/pecas/placeholder.webp';">
                     <div class="modal-badges-float">
                         <span class="badge-estado ${produto.estado === 'Nova' ? 'badge-nova' : 'badge-usada'}">${produto.estado}</span>
                         <span class="badge-stock ${produto.disponibilidade === 'Em stock' ? 'badge-em-stock' : 'badge-encomenda'}">${produto.disponibilidade}</span>
@@ -799,7 +815,7 @@ function renderizarItensCarrinho() {
 
         return `
             <div class="item-carrinho-linha">
-                <img src="${produto.imagem}" alt="${produto.nome}" class="item-carrinho-img" onerror="this.onerror=null; this.src='img/disco-travao.jpg';">
+                <img src="${produto.imagem}" alt="${produto.nome}" class="item-carrinho-img" onerror="this.onerror=null; this.src='img/pecas/placeholder.webp';">
                 <div class="item-carrinho-info">
                     <h5 class="item-carrinho-titulo">${produto.nome}</h5>
                     <span class="item-carrinho-ref">Ref: ${produto.referencia}</span>
